@@ -11,18 +11,39 @@ var _actor_id = argument0,
 with (_actor_id)
 {
 	
-	// Horizontal collisions
-	if (global.map[map_x+_move_x, map_y] == tile.wall)
+	if (map_x != 0 && map_x < global.MAP_WIDTH-2 && map_y != 0 && map_y < global.MAP_HEIGHT-2)
+	{
+		// Horizontal collisions
+		if (global.map[map_x+_move_x, map_y].tile_block_path == true)
+		{
+			_move_x = 0;
+		}
+	
+		// Vertical collisions
+		if (global.map[map_x, map_y+_move_y].tile_block_path == true)
+		{
+			_move_y = 0;
+		}
+	}
+		
+	// Stay within the map
+	if (map_x == 0 && _move_x < 0)
 	{
 		_move_x = 0;
 	}
-	
-	// Veretical collisions
-	if (global.map[map_x, map_y+_move_y] == tile.wall)
+	if (map_x >= global.MAP_WIDTH-1 && _move_x > 0)
+	{
+		_move_x = 0;
+	}
+	if (map_y == 0 && _move_y < 0)
 	{
 		_move_y = 0;
 	}
-	
+	if (map_y >= global.MAP_HEIGHT-1 && _move_y > 0)
+	{
+		_move_y = 0;
+	}
+
 	map_x += _move_x;
 	map_y += _move_y;
 }
