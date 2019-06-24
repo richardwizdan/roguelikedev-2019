@@ -1,0 +1,25 @@
+/// @#function scr_create_walls
+/// @description Create the walls around ground tiles.
+
+for (var i = 1; i < global.MAP_WIDTH-1; i++)
+	{
+		for (var j = 1; j < global.MAP_HEIGHT-1; j++)
+		{
+			
+			if (global.map[i, j] == tile.empty)
+			{
+				if (global.map[i+1, j] == tile.ground || 
+				global.map[i-1, j] == tile.ground || 
+				global.map[i, j-1] == tile.ground || 
+				global.map[i, j+1] == tile.ground || 
+				global.map[i-1, j-1] == tile.ground ||
+				global.map[i-1, j+1] == tile.ground ||
+				global.map[i+1, j-1] == tile.ground ||
+				global.map[i+1, j+1] == tile.ground)
+				{
+					global.map[i, j] = tile.wall;
+				}
+			}
+			
+		}
+	}
