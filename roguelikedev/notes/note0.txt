@@ -1,3 +1,1 @@
 # Changelog
-- changed the tiles to objects to store variables for collisions and FOV
-- fixed a bug with moving out of map bounds

@@ -1,4 +1,4 @@
-/// @function scr_add_tile(map_x, map_y, tile_name, tile_sprite, tile_block_path, tile_block_sight)
+/// @function scr_update_tile(map_x, map_y, tile_name, tile_sprite, tile_block_path, tile_block_sight)
 /// @description Add a tile to the game world.
 /// @param {int} map_x x position on the game map.
 /// @param {int} map_y y position on the game map.
@@ -14,7 +14,6 @@ var _map_x = argument0,
 	_tile_block_path = argument4,
 	_tile_block_sight = argument5;
 
-global.map[_map_x, _map_y] = instance_create_layer(_map_x*global.TILE_SIZE, _map_y*global.TILE_SIZE, "Tiles", obj_tile);
 with (global.map[_map_x, _map_y])
 {
 	tile_name = _tile_name;

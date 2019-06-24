@@ -14,6 +14,6 @@ for (var i = _map_x; i < _map_x+_room_width; i++)
 {
 	for (var j = _map_y; j < _map_y+_room_height; j++)
 	{
-		global.map[i, j] = tile.ground;
+		scr_update_tile(i, j, "Ground", spr_ground_dark, false, false);
 	}
 }
