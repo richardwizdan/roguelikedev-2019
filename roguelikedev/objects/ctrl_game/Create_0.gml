@@ -1,10 +1,10 @@
 /// @description Initialize the game
 
 //----- Game options
-global.graphics_style = 1; // 0-ascii 1-custom
+global.graphics_style = 0; // 0-ascii 1-custom
 
 //----- Map variables
-global.TILE_SIZE = 10;
+global.TILE_SIZE = 16;
 global.MAP_WIDTH = 80;
 global.MAP_HEIGHT = 45;
 
