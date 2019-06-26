@@ -8,13 +8,6 @@ global.TILE_SIZE = 16;
 global.MAP_WIDTH = 80;
 global.MAP_HEIGHT = 45;
 
-//----- Tile types
-enum tile {
-	empty = 0,
-	ground,
-	wall
-}
-
 //----- Create the Input controller
 instance_create_layer(0, 0, "Instances", ctrl_input);
 

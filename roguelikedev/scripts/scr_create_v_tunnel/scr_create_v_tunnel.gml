@@ -10,5 +10,5 @@ var _map_x = argument0,
 	
 for (var i = min(_map_y1, _map_y2); i < max(_map_y1, _map_y2)+1; i++)
 {
-	scr_update_tile(_map_x, i, "Ground", spr_ground_dark, false, false);
+	instance_create_layer(_map_x*global.TILE_SIZE, i*global.TILE_SIZE, "Tiles", obj_ground);
 }

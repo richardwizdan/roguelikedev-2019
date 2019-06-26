@@ -11,35 +11,25 @@ var _actor_id = argument0,
 with (_actor_id)
 {
 	
-	if (map_x != 0 && map_x < global.MAP_WIDTH-2 && map_y != 0 && map_y < global.MAP_HEIGHT-2)
+	// Horizontal collisions
+	if (place_meeting(x + _move_x* global.TILE_SIZE, y, obj_wall))
 	{
-		// Horizontal collisions
-		if (global.map[map_x+_move_x, map_y].tile_block_path == true)
-		{
-			_move_x = 0;
-		}
+		_move_x = 0;
+	}
 	
-		// Vertical collisions
-		if (global.map[map_x, map_y+_move_y].tile_block_path == true)
-		{
-			_move_y = 0;
-		}
-	}
-		
-	// Stay within the map
-	if (map_x == 0 && _move_x < 0)
-	{
-		_move_x = 0;
-	}
-	if (map_x >= global.MAP_WIDTH-1 && _move_x > 0)
-	{
-		_move_x = 0;
-	}
-	if (map_y == 0 && _move_y < 0)
+	// Vertical collisions
+	if (place_meeting(x, y + _move_y* global.TILE_SIZE, obj_wall))
 	{
 		_move_y = 0;
 	}
-	if (map_y >= global.MAP_HEIGHT-1 && _move_y > 0)
+
+		
+	// Stay within the map
+	if (x + _move_x* global.TILE_SIZE < 0 || x + _move_x* global.TILE_SIZE > room_width)
+	{
+		_move_x = 0;
+	}
+	if (y + _move_y* global.TILE_SIZE < 0 || y + _move_y* global.TILE_SIZE > room_height)
 	{
 		_move_y = 0;
 	}
