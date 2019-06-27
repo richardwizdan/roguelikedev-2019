@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "016b99e0-44fa-42ed-9785-eb0fd144dbed",
+            "Value": {
+                "id": "b57c99df-9185-494c-83c6-7e07963c7814",
+                "resourcePath": "scripts\\scr_make_map\\scr_make_map.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "07610132-b6a0-4c50-9baf-c3037fbf83fc",
             "Value": {
                 "id": "f7ecb344-a3d1-43ae-823c-82fc87578f34",
@@ -396,6 +404,7 @@
         "3a7586ce-2c64-41de-9637-9810d2f4429c",
         "29106447-2d2e-4e95-af0b-3530461915c3",
         "6bcb008f-11d7-431f-af3a-07860a1bf453",
+        "016b99e0-44fa-42ed-9785-eb0fd144dbed",
         "39cb7d78-be81-42d1-ae2a-be3758224d41",
         "82f5296b-530c-4160-adba-0fd0ccacba63"
     ],

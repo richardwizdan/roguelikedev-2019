@@ -14,19 +14,32 @@ for (var i=0; i<rm_width; i++)
 		if (place_meeting(x+i*global.TILE_SIZE, y+j*global.TILE_SIZE, par_tile))
 		{
 			is_colliding = true;	
+			show_debug_message("Room " + rm_name + " is colliding!")
+			break;
 		}
 		else
 		{
 			is_colliding = false;	
 		}
 	}
+	
+	if (place_meeting(x+i*global.TILE_SIZE, y+j*global.TILE_SIZE, par_tile))
+	{
+		is_colliding = true;	
+		show_debug_message("Room " + rm_name + " is colliding!")
+		break;
+	}
+	else
+	{
+		is_colliding = false;	
+	}
 }
 
 if (!is_colliding)
 {
-	for (var i = map_x+1; i < map_x+rm_width; i++)
+	for (var i = map_x+1; i < map_x+rm_width-1; i++)
 	{
-		for (var j = map_y+1; j < map_y+rm_height; j++)
+		for (var j = map_y+1; j < map_y+rm_height-1; j++)
 		{
 			instance_create_layer(i*global.TILE_SIZE, j*global.TILE_SIZE, "Tiles", obj_ground);
 		}

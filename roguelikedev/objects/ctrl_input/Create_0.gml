@@ -6,5 +6,6 @@ key_up = keyboard_check_pressed(vk_up);
 key_down = keyboard_check_pressed(vk_down);
 
 key_escape = keyboard_check_pressed(vk_escape);
+key_restart = keyboard_check_pressed(vk_home);
 
 key_change_graphics = keyboard_check_pressed(vk_f1);
