@@ -10,10 +10,11 @@ var _map_x = argument0,
 	_room_width = argument2,
 	_room_height = argument3;
 	
-for (var i = _map_x+1; i < _map_x+_room_width; i++)
+	
+with (instance_create_layer(_map_x, _map_y, "Tiles", obj_room))
 {
-	for (var j = _map_y+1; j < _map_y+_room_height; j++)
-	{
-		instance_create_layer(i*global.TILE_SIZE, j*global.TILE_SIZE, "Tiles", obj_ground);
-	}
+	map_x = _map_x;
+	map_y = _map_y;
+	rm_width = _room_width;
+	rm_height = _room_height;
 }
