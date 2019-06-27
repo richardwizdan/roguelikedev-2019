@@ -1,3 +1,7 @@
 /// @description Draw the tile
 
-draw_sprite(tile_sprite, global.graphics_style+tile_lit_up, x, y);
+//----- Draw the tile only if it has been seen at least once
+if (tile_visible)
+{
+	draw_sprite(tile_sprite, global.graphics_style+tile_lit_up, x, y);
+}

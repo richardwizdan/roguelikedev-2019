@@ -9,6 +9,7 @@ with (par_tile)
 	!collision_line(x+_offset, y+_offset, global.PLAYER.x+_offset, global.PLAYER.y+_offset, obj_wall, false, true))
 	{
 		tile_lit_up = 0;	
+		tile_visible = true;
 	}
 	else
 	{
