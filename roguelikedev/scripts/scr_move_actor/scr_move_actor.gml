@@ -12,15 +12,21 @@ with (_actor_id)
 {
 	
 	// Horizontal collisions
-	if (place_meeting(x + _move_x* global.TILE_SIZE, y, obj_wall))
+	if (place_meeting(x + _move_x* global.TILE_SIZE, y, par_tile))
 	{
-		_move_x = 0;
+		if(instance_place(x + _move_x*global.TILE_SIZE, y, par_tile).tile_block_path == true)
+		{
+			_move_x = 0;
+		}
 	}
 	
 	// Vertical collisions
-	if (place_meeting(x, y + _move_y* global.TILE_SIZE, obj_wall))
+	if (place_meeting(x, y + _move_y* global.TILE_SIZE, par_tile))
 	{
-		_move_y = 0;
+		if(instance_place(x, y+ _move_y*global.TILE_SIZE, par_tile).tile_block_path == true)
+		{
+			_move_y = 0;
+		}
 	}
 
 		
