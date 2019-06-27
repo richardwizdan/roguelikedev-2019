@@ -199,6 +199,14 @@
             }
         },
         {
+            "Key": "82f5296b-530c-4160-adba-0fd0ccacba63",
+            "Value": {
+                "id": "1ec10c0e-00d8-4f03-b3e5-8e1502909780",
+                "resourcePath": "scripts\\scr_update_fov\\scr_update_fov.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "86224da1-1415-4ca9-ba13-569cbe3db7b5",
             "Value": {
                 "id": "99015bc8-9685-4403-868a-9299b8e0578e",
@@ -371,7 +379,8 @@
         "65a25c0f-4d34-4ab3-bcc1-859c0d9c9650",
         "3a7586ce-2c64-41de-9637-9810d2f4429c",
         "29106447-2d2e-4e95-af0b-3530461915c3",
-        "39cb7d78-be81-42d1-ae2a-be3758224d41"
+        "39cb7d78-be81-42d1-ae2a-be3758224d41",
+        "82f5296b-530c-4160-adba-0fd0ccacba63"
     ],
     "tutorial": ""
 }

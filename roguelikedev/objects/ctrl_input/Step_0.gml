@@ -19,6 +19,7 @@ if (instance_exists(global.PLAYER))
 	{
 		scr_move_actor(global.PLAYER, 0, 1);
 	}
+	scr_update_fov();
 }
 
 //----- Exit the game
