@@ -11,11 +11,7 @@ var _max_rooms = argument0,
 	_map_y = 0,
 	_rm_width = 0,
 	_rm_height = 0,
-	_room_id = 0,
-	_new_x = 0,
-	_new_y = 0,
-	_prev_x = 0,
-	_prev_y = 0;
+	_room_id = 0;
 	
 //----- Initialize the rooms array
 for (var i=0; i<_max_rooms; i++)
@@ -38,6 +34,10 @@ for (var r=0; r<_max_rooms; r++)
 		map_y = _map_y;
 		rm_width = _rm_width;
 		rm_height = _rm_height;
+		map_x2 = map_x + rm_width;
+		map_y2 = map_y + rm_height;
+		center_x = round((map_x + map_x2)/2);
+		center_y = round((map_y + map_y2)/2);
 		rm_name = string(r);
 	}
 	
@@ -47,3 +47,5 @@ for (var r=0; r<_max_rooms; r++)
 }
 
 global.PLAYER = instance_create_layer(0 ,0, "Actors", obj_player);
+global.PLAYER.map_x = rooms[0].map_x+1;
+global.PLAYER.map_y = rooms[0].map_y+1;

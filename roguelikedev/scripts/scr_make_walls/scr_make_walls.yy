@@ -1,8 +1,8 @@
 {
-    "id": "6bcb008f-11d7-431f-af3a-07860a1bf453",
+    "id": "f581418e-81d4-4ab3-9041-93aecdf9529a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_create_walls",
+    "name": "scr_make_walls",
     "IsCompatibility": false,
     "IsDnD": false
 }

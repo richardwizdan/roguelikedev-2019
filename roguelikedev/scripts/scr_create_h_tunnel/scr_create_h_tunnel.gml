@@ -11,4 +11,5 @@ var _map_x1 = argument0,
 for (var i = min(_map_x1, _map_x2); i < max(_map_x1, _map_x2)+1; i++)
 {
 	instance_create_layer(i*global.TILE_SIZE, _map_y*global.TILE_SIZE, "Tiles", obj_ground);
+	show_debug_message("Tunnel created at x" + string(i*global.TILE_SIZE) + " y" + string(_map_y*global.TILE_SIZE));
 }
