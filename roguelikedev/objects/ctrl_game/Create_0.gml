@@ -10,6 +10,7 @@ global.MAP_HEIGHT = 45;
 max_rooms = 30;
 room_max_size = 10;
 room_min_size = 6;
+max_monsters_per_room = 3;
 
 //----- Create the Input controller
 instance_create_layer(0, 0, "Instances", ctrl_input);

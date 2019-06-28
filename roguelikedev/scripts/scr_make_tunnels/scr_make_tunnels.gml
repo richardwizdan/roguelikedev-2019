@@ -8,8 +8,6 @@ var _new_x = 0,
 
 _prev_x = rooms[0].center_x;
 _prev_y = rooms[0].center_y;
-show_debug_message("prev_x: " + string(rooms[0].center_x));
-show_debug_message("prev_y: " + string(rooms[0].center_y));
 
 for (var i=1; i<array_length_1d(rooms); i++)
 {
@@ -36,12 +34,6 @@ for (var i=1; i<array_length_1d(rooms); i++)
 	}
 	else
 	{
-		show_debug_message("Room " + string(i) + " skipped!")
 		continue;	
 	}
-}
-
-with (obj_room)
-{
-	instance_destroy();
 }

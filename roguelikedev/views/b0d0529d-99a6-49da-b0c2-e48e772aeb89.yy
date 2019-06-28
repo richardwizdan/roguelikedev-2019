@@ -8,7 +8,8 @@
         "29106447-2d2e-4e95-af0b-3530461915c3",
         "016b99e0-44fa-42ed-9785-eb0fd144dbed",
         "98b51234-2e7d-49f9-9246-917d91b2a210",
-        "f581418e-81d4-4ab3-9041-93aecdf9529a"
+        "f581418e-81d4-4ab3-9041-93aecdf9529a",
+        "9b362161-f242-44d8-9867-cadec55b633e"
     ],
     "filterType": "GMScript",
     "folderName": "Level Generation",

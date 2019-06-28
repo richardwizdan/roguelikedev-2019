@@ -20,7 +20,6 @@ for (var i=0; i<rm_width; i++)
 	if (place_meeting(x+i*global.TILE_SIZE, y+j*global.TILE_SIZE, obj_ground))
 	{
 		is_colliding = true;	
-		show_debug_message("Room " + rm_name + " is colliding!")
 		break;
 	}
 	else
@@ -38,4 +37,10 @@ if (!is_colliding)
 			instance_create_layer(i*global.TILE_SIZE, j*global.TILE_SIZE, "Tiles", obj_ground);
 		}
 	}
+}
+
+//----- Populate the room with monsters
+if (!is_colliding)
+{
+	scr_populate_room();
 }
