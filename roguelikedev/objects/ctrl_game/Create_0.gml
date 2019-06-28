@@ -14,4 +14,8 @@ room_min_size = 6;
 //----- Create the Input controller
 instance_create_layer(0, 0, "Instances", ctrl_input);
 
+//----- Gif recording
+gif_record = false;
+
+//----- Start the game
 room_goto_next();

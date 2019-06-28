@@ -6,6 +6,9 @@ A roguelike game created in Game Maker Studio 2 for Reddit roguelikedev's [Rogue
 - moving: arrow keys
 - exit game: escape
 - switch graphics mode (ascii-like/color sprites): F1
+- restart current room: home
+- start/stop recording the gif: Page Up
 
 ### Resources
 1. Color palette: [Endesga 32](https://lospec.com/palette-list/endesga-32)
+2. Gif recording created by following Shaun Spalding's [Animated GIF Tutorial](https://www.youtube.com/watch?v=pQXBeklAN-g)
