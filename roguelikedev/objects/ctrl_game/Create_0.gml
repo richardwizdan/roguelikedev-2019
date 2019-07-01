@@ -15,4 +15,14 @@ max_monsters_per_room = 3;
 //----- Create the Input controller
 instance_create_layer(0, 0, "Instances", ctrl_input);
 
+//----- Game states
+
+enum game_state
+{
+	player_turn,
+	enemy_turn
+}
+
+game_turn = game_state.player_turn;
+
 room_goto_next();
