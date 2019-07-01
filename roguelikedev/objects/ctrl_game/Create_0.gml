@@ -26,6 +26,7 @@ enum game_state
 //----- Colors
 global.col_red = make_color_rgb(228, 59, 68);
 global.col_darkred = make_color_rgb(162, 38, 51);
+global.col_blue = make_color_rgb(0, 153, 219);
 
 game_turn = game_state.player_turn;
 
