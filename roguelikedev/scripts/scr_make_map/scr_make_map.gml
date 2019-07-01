@@ -42,8 +42,7 @@ for (var r=0; r<_max_rooms; r++)
 	}
 	
 	rooms[r] = _room_id;
-	show_debug_message("Room " + string(r+1) + " x: " + string(rooms[r].map_x) + " y: " + string(rooms[r].map_y));
-	
+
 }
 
 global.PLAYER = instance_create_layer(0 ,0, "Actors", obj_player);

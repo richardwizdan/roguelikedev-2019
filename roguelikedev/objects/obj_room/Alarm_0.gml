@@ -8,7 +8,6 @@ for (var i=0; i<rm_width; i++)
 		if (place_meeting(x+i*global.TILE_SIZE, y+j*global.TILE_SIZE, obj_ground))
 		{
 			is_colliding = true;	
-			show_debug_message("Room " + rm_name + " is colliding!")
 			break;
 		}
 		else

@@ -4,3 +4,11 @@ map_x = 0;
 map_y = 0;
 enemy_visible = false;
 bkg_sprite = spr_bg_dark;
+
+//----- Attributes
+att_current_wounds = 3;
+att_max_wounds = att_current_wounds;
+att_weapon_skill = 3;
+att_strength = 3;
+att_toughness = 3;
+att_attacks = 1;

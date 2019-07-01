@@ -23,6 +23,10 @@ enum game_state
 	enemy_turn
 }
 
+//----- Colors
+global.col_red = make_color_rgb(228, 59, 68);
+global.col_darkred = make_color_rgb(162, 38, 51);
+
 game_turn = game_state.player_turn;
 
 room_goto_next();
