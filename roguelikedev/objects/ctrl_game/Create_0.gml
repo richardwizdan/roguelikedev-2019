@@ -16,6 +16,8 @@ instance_create_layer(0, 0, "Instances", ctrl_input);
 
 //----- Gif recording
 gif_record = false;
+frames_count = 0;
+gif_length = 150;
 
 //----- Start the game
 room_goto_next();

@@ -11,4 +11,3 @@ A roguelike game created in Game Maker Studio 2 for Reddit roguelikedev's [Rogue
 
 ### Resources
 1. Color palette: [Endesga 32](https://lospec.com/palette-list/endesga-32)
-2. Gif recording created by following Shaun Spalding's [Animated GIF Tutorial](https://www.youtube.com/watch?v=pQXBeklAN-g)
