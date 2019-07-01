@@ -15,6 +15,11 @@ max_monsters_per_room = 3;
 //----- Create the Input controller
 instance_create_layer(0, 0, "Instances", ctrl_input);
 
+//----- Gif recording
+gif_record = false;
+frames_count = 0;
+gif_length = 150;
+
 //----- Game states
 
 enum game_state
