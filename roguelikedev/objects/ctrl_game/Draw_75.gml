@@ -9,11 +9,11 @@ if (gif_record)
 	}
 	else if (frames_count < gif_length)
 	{
-		gif_add_surface(gif, application_surface, 6/100);
+		gif_add_surface(gif, application_surface, 3);
 	}
 	else
 	{
-		var _save = gif_save(gif, "game_gif.gif");
+		var _save = gif_save(gif, "roguelikedev_gif.gif");
 		frames_count = 0;
 		gif_record = false;
 		
