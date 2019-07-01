@@ -6,7 +6,8 @@
 
 var _actor_id = argument0,
 	_move_x = argument1,
-	_move_y = argument2;
+	_move_y = argument2,
+	_target_id = 0;
 	
 with (_actor_id)
 {
@@ -20,13 +21,29 @@ with (_actor_id)
 		}
 	}
 	
+	// Attack the enemy
+	if (instance_place(x + _move_x * global.TILE_SIZE, y, par_enemy))
+	{
+		_target_id = instance_place(x + _move_x * global.TILE_SIZE, y, par_enemy);
+		_move_x = 0;
+		scr_attack_melee(_target_id);
+	}
+	
 	// Vertical collisions
 	if (place_meeting(x, y + _move_y* global.TILE_SIZE, par_tile))
 	{
-		if(instance_place(x, y+ _move_y*global.TILE_SIZE, par_tile).tile_block_path == true)
+		if(instance_place(x, y + _move_y*global.TILE_SIZE, par_tile).tile_block_path == true)
 		{
 			_move_y = 0;
 		}
+	}
+	
+	// Attack the enemy
+	if (instance_place(x, y + _move_y * global.TILE_SIZE, par_enemy))
+	{
+		_target_id = instance_place(x, y + _move_y * global.TILE_SIZE, par_enemy);
+		_move_y = 0;
+		scr_attack_melee(_target_id);
 	}
 
 		
