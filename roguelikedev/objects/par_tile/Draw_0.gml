@@ -5,3 +5,6 @@ if (tile_visible)
 {
 	draw_sprite(tile_sprite, global.graphics_style+tile_lit_up, x, y);
 }
+
+// Debug
+//draw_text(x, y, string(tile_g_score));

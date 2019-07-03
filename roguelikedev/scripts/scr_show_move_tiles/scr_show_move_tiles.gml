@@ -1,6 +1,7 @@
 /// @function scr_show_move_tiles(tile_id, att_move, att_actions)
 /// @description Color the tiles accordingly to actor's remaining actions.
 /// @param {real} tile_id id of the tile to be colored
+/// @param {int} att_move Selected actor's move per action
 /// @param {int} att_actions Selected actor's remaining actions
 
 var _tile_id = argument0,
@@ -12,7 +13,7 @@ if (_att_current_actions > 1)
 	/* 
 		-------------------------------------------------------------------------------
 		There's a redundancy here, but this system is set up so that an actor can move
-		multiple squares per in one action. 
+		multiple squares per one action. 
 	    -------------------------------------------------------------------------------
 	*/
 	if (_tile_id.tile_g_score > _att_move)
@@ -21,11 +22,13 @@ if (_att_current_actions > 1)
 		{
 			// There's an enemy on the tile
 			_tile_id.tile_lit_up = 6;
+			_tile_id.tile_move = true;
 		}
 		else
 		{
 			// Tile is empty
 			_tile_id.tile_lit_up = 4;
+			_tile_id.tile_move = true;
 		}
 	}
 	else
@@ -34,11 +37,13 @@ if (_att_current_actions > 1)
 		{
 			// There's an enemy on the tile
 			_tile_id.tile_lit_up = 6;
+			_tile_id.tile_move = true;
 		}
 		else
 		{
 			// Tile is empty
 			_tile_id.tile_lit_up = 4;
+			_tile_id.tile_move = true;
 		}
 	}
 }
@@ -48,10 +53,12 @@ else
 	{
 		// There's an enemy on the tile
 		_tile_id.tile_lit_up = 6;
+		_tile_id.tile_move = true;
 	}
 	else
 	{
 		// Tile is empty
 		_tile_id.tile_lit_up = 4;
+		_tile_id.tile_move = true;
 	}
 }

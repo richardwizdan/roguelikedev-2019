@@ -13,8 +13,8 @@ with (_actor_id)
 {
 	
 	// Horizontal collisions
-	if (global.map[map_x+_move_x, map_y].tile_block_path &&
-	    att_current_actions > global.map[map_x+_move_x, map_y])
+	if (global.map[map_x+_move_x, map_y].tile_block_path ||
+	    att_current_actions < global.map[map_x+_move_x, map_y].tile_move_cost)
 	{
 		_move_x = 0;
 	}
@@ -28,8 +28,8 @@ with (_actor_id)
 	}
 	
 	// Vertical collisions
-	if (global.map[map_x, map_y+_move_y].tile_block_path &&
-	    att_current_actions > global.map[map_x, map_y+_move_y])
+	if (global.map[map_x, map_y+_move_y].tile_block_path ||
+	    att_current_actions < global.map[map_x, map_y+_move_y].tile_move_cost)
 	{
 		_move_y = 0;
 	}
@@ -58,4 +58,5 @@ with (_actor_id)
 	
 	map_x += _move_x;
 	map_y += _move_y;
+
 }

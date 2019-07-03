@@ -1,4 +1,4 @@
-/// @description Creatye the game map reference
+/// @description Create the game map reference
 
 with (par_tile)
 {

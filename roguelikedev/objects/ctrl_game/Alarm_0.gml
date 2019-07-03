@@ -4,4 +4,4 @@
 scr_make_tunnels();
 
 //----- Creatye the game map reference
-alarm[1] = 5;
+alarm[1] = 2;

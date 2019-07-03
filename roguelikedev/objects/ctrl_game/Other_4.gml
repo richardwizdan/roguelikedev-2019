@@ -14,5 +14,5 @@ if (room != rm_init)
 
 	// Create rooms and tunnels
 	scr_make_map(max_rooms, room_min_size, room_max_size);
-	alarm[0] = 5 // Connect rooms with tunnels
+	alarm[0] = 1 // Connect rooms with tunnels
 }

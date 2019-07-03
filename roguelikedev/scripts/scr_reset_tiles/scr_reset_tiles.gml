@@ -5,4 +5,5 @@ with (par_tile)
 {
 	tile_g_score = 0;
 	tile_parent = noone;
+	tile_move = false;
 }
