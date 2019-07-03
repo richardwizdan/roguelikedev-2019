@@ -59,4 +59,8 @@ with (_actor_id)
 
 	map_x += _move_x;
 	map_y += _move_y;
+	if (map_x != 0 && map_y != 0)
+	{
+		att_current_actions -= 1;
+	}
 }

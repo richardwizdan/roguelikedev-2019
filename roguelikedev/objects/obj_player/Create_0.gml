@@ -16,3 +16,5 @@ att_weapon_skill = 3;
 att_strength = 4;
 att_toughness = 4;
 att_attacks = 1;
+att_actions = 3;
+att_current_actions = att_actions;

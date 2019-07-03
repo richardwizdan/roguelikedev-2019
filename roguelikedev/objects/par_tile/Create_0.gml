@@ -7,3 +7,4 @@ tile_lit_up = 0;
 tile_visible = true;
 tile_neighbors = ds_list_create();
 tile_occupant = noone;
+tile_move_cost = 1;
