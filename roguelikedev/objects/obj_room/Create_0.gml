@@ -11,4 +11,4 @@ center_y = 0;
 is_colliding = false;
 rm_name = "";
 
-alarm[0] = 2;
+alarm[0] = 1;

@@ -4,11 +4,11 @@ if (room != rm_init)
 {
 	
 	// Create empty map filled with Walls
-	for (var i=0; i<global.MAP_WIDTH; i++)
+	for (var xx=0; xx<global.MAP_WIDTH; xx++)
 	{
-		for (var j=0; j<global.MAP_HEIGHT; j++)
+		for (var yy=0; yy<global.MAP_HEIGHT; yy++)
 		{
-			instance_create_layer(i*global.TILE_SIZE, j*global.TILE_SIZE, "Tiles", obj_wall);
+			instance_create_layer(xx*global.TILE_SIZE, yy*global.TILE_SIZE, "Tiles", obj_wall);
 		}
 	}
 
