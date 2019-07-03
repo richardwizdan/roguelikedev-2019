@@ -1,5 +1,7 @@
 /// @description Initialize level layout
 
+game_initialized = 0;
+
 if (room != rm_init)
 {
 	
