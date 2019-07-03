@@ -11,4 +11,6 @@ att_max_wounds = att_current_wounds;
 att_weapon_skill = 3;
 att_strength = 3;
 att_toughness = 3;
-att_attacks = 1;
+att_move = 1;
+att_actions = 1;
+att_current_actions = att_actions;

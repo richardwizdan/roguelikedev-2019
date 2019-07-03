@@ -27,12 +27,13 @@ switch (game_turn)
 			}
 			scr_update_fov();
 			
-			if (global.PLAYER.att_current_actions <= 0)
-			{
-				game_turn = game_state.enemy_turn;
-			}
-			
 		}
+		
+		if (global.PLAYER.att_current_actions <= 0)
+		{
+			game_turn = game_state.enemy_turn;
+		}
+		
 		
 	break; // end of player's turn
 	

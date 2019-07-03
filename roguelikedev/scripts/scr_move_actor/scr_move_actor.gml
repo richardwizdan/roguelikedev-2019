@@ -13,12 +13,10 @@ with (_actor_id)
 {
 	
 	// Horizontal collisions
-	if (place_meeting(x + _move_x* global.TILE_SIZE, y, par_tile))
+	if (global.map[map_x+_move_x, map_y].tile_block_path &&
+	    att_current_actions > global.map[map_x+_move_x, map_y])
 	{
-		if(instance_place(x + _move_x*global.TILE_SIZE, y, par_tile).tile_block_path == true)
-		{
-			_move_x = 0;
-		}
+		_move_x = 0;
 	}
 	
 	// Attack the enemy
@@ -30,12 +28,10 @@ with (_actor_id)
 	}
 	
 	// Vertical collisions
-	if (place_meeting(x, y + _move_y* global.TILE_SIZE, par_tile))
+	if (global.map[map_x, map_y+_move_y].tile_block_path &&
+	    att_current_actions > global.map[map_x, map_y+_move_y])
 	{
-		if(instance_place(x, y + _move_y*global.TILE_SIZE, par_tile).tile_block_path == true)
-		{
-			_move_y = 0;
-		}
+		_move_y = 0;
 	}
 	
 	// Attack the enemy
@@ -57,10 +53,9 @@ with (_actor_id)
 		_move_y = 0;
 	}
 
+	// Reduce the number of actions
+	att_current_actions -= global.map[map_x+_move_x, map_y+_move_y].tile_move_cost;
+	
 	map_x += _move_x;
 	map_y += _move_y;
-	if (map_x != 0 && map_y != 0)
-	{
-		att_current_actions -= 1;
-	}
 }
